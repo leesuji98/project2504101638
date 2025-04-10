@@ -13,6 +13,10 @@ public:
 	int getSum(int a, int b) {
 		return a + b;
 	}
+
+  int getZegop(int a) {
+		return (a * a);
+  }
   
 	int getMinus(int a, int b) {
 		return a - b;
@@ -44,6 +48,12 @@ TEST(t1, GetMinusTest) {
 	int expected = 4;
 	int actual = c.getMinus(10, 6);
 	EXPECT_EQ(expected, actual);
+}
+
+TEST(t1, zegop) {
+	Cal cal;
+	int ret = cal.getZegop(10);
+	EXPECT_EQ(100, ret);
 }
 
 int main() {
