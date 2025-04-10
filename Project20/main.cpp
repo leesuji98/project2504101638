@@ -2,16 +2,20 @@
 
 class Cal {
 public:
-  	Cal() {};
-
-	int getMinus(int a, int b) {
-		return a - b;
-  }
-
+	Cal() {};
+  
 	int getDivide(int a, int b) {
 		if (b == 0)
 			return -1;
 		return a / b;
+	}
+  
+	int getSum(int a, int b) {
+		return a + b;
+	}
+  
+	int getMinus(int a, int b) {
+		return a - b;
 	}
 };
 
@@ -28,6 +32,11 @@ TEST(t1, Divide2) {
 TEST(t1, Divide3) {
 	Cal c1;
 	EXPECT_EQ(3, c1.getDivide(9, 3));
+}
+
+TEST(t1, sumTest) {
+	Cal cal;
+	EXPECT_EQ(3, cal.getSum(1, 2));
 }
 
 TEST(t1, GetMinusTest) {
