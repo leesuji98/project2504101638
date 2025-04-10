@@ -2,7 +2,12 @@
 
 class Cal {
 public:
-	Cal() {};
+  	Cal() {};
+
+	int getMinus(int a, int b) {
+		return a - b;
+  }
+
 	int getDivide(int a, int b) {
 		if (b == 0)
 			return -1;
@@ -23,6 +28,13 @@ TEST(t1, Divide2) {
 TEST(t1, Divide3) {
 	Cal c1;
 	EXPECT_EQ(3, c1.getDivide(9, 3));
+}
+
+TEST(t1, GetMinusTest) {
+	Cal c;
+	int expected = 4;
+	int actual = c.getMinus(10, 6);
+	EXPECT_EQ(expected, actual);
 }
 
 int main() {
