@@ -13,6 +13,11 @@ public:
 			return -1;
 		return a / b;
 	}
+
+	int getGop(int a, int b)
+	{
+		return a * b;
+	}
 };
 
 TEST(t1, Divide1) {
@@ -35,6 +40,13 @@ TEST(t1, GetMinusTest) {
 	int expected = 4;
 	int actual = c.getMinus(10, 6);
 	EXPECT_EQ(expected, actual);
+}
+
+TEST(t1, GopTest)
+{
+	Cal stCal;
+
+	EXPECT_EQ(10, stCal.getGop(2, 5));
 }
 
 int main() {
