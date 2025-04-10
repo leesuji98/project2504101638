@@ -13,6 +13,10 @@ public:
   int getSum(int a, int b) {
 		return a + b;
 	}
+  
+	int getMinus(int a, int b) {
+		return a - b;
+  }
 };
 
 TEST(t1, Divide1) {
@@ -30,9 +34,16 @@ TEST(t1, Divide3) {
 	EXPECT_EQ(3, c1.getDivide(9, 3));
 }
 
+
 TEST(t1, sumTest) {
 	Cal cal;
 	EXPECT_EQ(3, cal.getSum(1, 2));
+
+TEST(t1, GetMinusTest) {
+	Cal c;
+	int expected = 4;
+	int actual = c.getMinus(10, 6);
+	EXPECT_EQ(expected, actual);
 }
 
 int main() {
