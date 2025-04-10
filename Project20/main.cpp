@@ -21,6 +21,11 @@ public:
 	int getMinus(int a, int b) {
 		return a - b;
 	}
+
+	int getGop(int a, int b)
+	{
+		return a * b;
+	}
 };
 
 TEST(t1, Divide1) {
@@ -56,7 +61,15 @@ TEST(t1, zegop) {
 	EXPECT_EQ(100, ret);
 }
 
+TEST(t1, GopTest)
+{
+	Cal stCal;
+
+	EXPECT_EQ(10, stCal.getGop(2, 5));
+}
+
 int main() {
 	::testing::InitGoogleMock();
 	return RUN_ALL_TESTS();
 }
+
