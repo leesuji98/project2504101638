@@ -14,9 +14,9 @@ public:
 		return a + b;
 	}
 
-  int getZegop(int a) {
+	int getZegop(int a) {
 		return (a * a);
-  }
+	}
   
 	int getMinus(int a, int b) {
 		return a - b;
@@ -55,10 +55,16 @@ TEST(t1, GetMinusTest) {
 	EXPECT_EQ(expected, actual);
 }
 
-TEST(t1, zegop) {
+TEST(t1, zegop1) {
 	Cal cal;
-	int ret = cal.getZegop(10);
-	EXPECT_EQ(100, ret);
+	int actual = cal.getZegop(10);
+	EXPECT_EQ(100, actual);
+}
+
+TEST(t1, zegop2) {
+	Cal cal;
+	int actual = cal.getZegop(-100);
+	EXPECT_EQ(10000, actual);
 }
 
 TEST(t1, GopTest)
